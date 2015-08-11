@@ -1,7 +1,5 @@
 class ItemsController < ApplicationController
 
-  
-
   def create
     @user = current_user
     @item = @user.items.build(item_params)
@@ -9,11 +7,15 @@ class ItemsController < ApplicationController
 
     if @item.save
       flash[:notice] = "Item was created successfully"
-      redirect_to user_path(current_user)
     else
       flash[:error] = "Sorry, There was an error in creating your item. Please try again"
-      redirect_to user_path(current_user)
     end
+
+    respond_to do |format|
+      format.html
+      format.js 
+    end
+
   end
 
 private
