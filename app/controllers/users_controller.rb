@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+    @items = @user.items
+    @new_item = Item.new #for Item#form
   end
 
   def update
