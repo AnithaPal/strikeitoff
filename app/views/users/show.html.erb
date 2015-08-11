@@ -9,6 +9,7 @@
       <%# render partial: 'items/item', collections: @items if @items.present? %>
       <%= render @items %>
     </div>
+    <br/>
     <div class= "row todo-form">
       <%= render partial: 'items/form', locals: {user: @user, item: @new_item } %>
     </div>
