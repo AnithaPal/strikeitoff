@@ -30,6 +30,8 @@ group :development do
   gem 'spring'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'web-console', '~> 2.0'
+  gem 'byebug' 
 end
 
 group :doc do

@@ -1,0 +1,14 @@
+<div class="container">
+  puts @user
+  puts @user.items
+  <%= form_for [user, user.items.build], method: :create do |f|%>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter your todo item" %>
+  </div>
+  <div class ="form-group">
+    <%= f.submit "Add Todo Item", class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>
+
