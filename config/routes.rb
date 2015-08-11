@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-
-
   devise_for :users
   resources :users, only: [:show, :update] do
     resources :items, only: [:create]
@@ -11,5 +9,5 @@ Rails.application.routes.draw do
   get "welcome/about", as: 'about'
 
   root to: 'users#show'
-  
+
 end
