@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row col-md-5 col-md-offset-1">
-    <%= form_for [user, item], method: :post do |f|%>
+    <%= form_for [user, item], remote: true do |f|%>
     <% if item.errors.any? %>
       <div class="alert alert-danger">
-        <h4> There are <%= pluralize(item.errors.count, 'error') %> </h4>
+        <h4 class='js-comments-count'> There are <%= pluralize(item.errors.count, 'error') %> </h4>
         <ul> 
           <% item.errors.full_messages.each do |msg| %>
             <li> <%= msg %> </li>
@@ -16,7 +16,7 @@
       <%= f.text_field :name, class: 'form-control', placeholder: "Enter your todo item" %>
     <% end %>
     <div class ="form-group">
-      <%= f.submit "Add Todo Item", class: 'btn btn-primary' %>
+      <%= f.submit "Add Todo Item", class: 'btn hidden-button' %>
     </div>
     <% end %>
   </div>
