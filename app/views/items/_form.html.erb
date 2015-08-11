@@ -1,6 +1,5 @@
 <div class="container">
   <%= form_for [user, item], method: :post do |f|%>
-  <!-- form_for({controller: "items", action: "create"}, method: :post) -->
   <% if item.errors.any? %>
     <div class="alert alert-danger">
       <h4> There are <%= pluralize(item.errors.count, 'error') %> </h4>
