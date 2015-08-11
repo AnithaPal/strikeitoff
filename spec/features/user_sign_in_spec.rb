@@ -9,11 +9,11 @@ describe 'User sign in' do
 
     it 'redirects user to user#show' do
       sign_in_nav
-      fill_in 'Email', with: 'codetrain15+1@gmail.com'
-      fill_in 'Password', with: 'helloworld'
+      fill_in 'Email', with: @user.email
+      fill_in 'Password', with: @user.password
       click_button 'Sign in'
       expect( page ).to have_content "Signed in successfully"
-      expect( current_path ).to eq(root_path)
+      expect( current_path ).to eq(user_path(@user))
     end
   end
 
@@ -26,15 +26,15 @@ describe 'User sign in' do
       @user.update_attributes(confirmed_at: nil)
 
       sign_in_nav
-      fill_in 'Email', with: 'codetrain15+6@gmail.com'
-      fill_in 'Password', with: 'helloworld'
+      fill_in 'Email', with: @user.email
+      fill_in 'Password', with: @user.password
       click_button 'Sign in'
       expect( page ).to have_content "You have to confirm your email address before continuing"
     end
 
     it 'requires correct password for user' do
       sign_in_nav
-      fill_in 'Email', with: 'codetrain15+1@gmail.com'
+      fill_in 'Email', with: @user.email
       fill_in 'Password', with: 'incorrectpass'
       click_button 'Sign in'
       expect( page ).to have_content "Invalid email or password"
@@ -43,7 +43,7 @@ describe 'User sign in' do
     it 'require correct email for user' do
       sign_in_nav
       fill_in 'Email', with: 'code@gmail.com'
-      fill_in 'Password', with: 'helloworld'
+      fill_in 'Password', with: @user.password
       click_button 'Sign in'
       expect( page ).to have_content "Invalid email or password"
     end

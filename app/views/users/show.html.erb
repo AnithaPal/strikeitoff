@@ -5,8 +5,12 @@
       <h1 > My Page </h1>
       <small > <%= current_user.name %> </small>
     </div>
+    <div class="row">
+      <%= render partial: 'items/item', collections: @items if @items.any? %>
+      <%# render @items %>
+    </div>
     <div class= "row">
-      <%= render partial 'items/form', locals: { user: @user, items: @items } %>
+      <%= render partial: 'items/form', locals: {user: @user, item: @new_item } %>
     </div>
   </div>
 </div>

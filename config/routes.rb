@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get "welcome/index", as: 'home'
   get "welcome/about", as: 'about'
 
-  root to: 'users#show'
+  root to: 'welcome#index'
 
 end
