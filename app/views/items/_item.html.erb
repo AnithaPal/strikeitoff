@@ -1,8 +1,9 @@
 <div class="container">
   <ul>
     <li>
-        <%= link_to "", [@user,item], method: :delete, class: 'glyphicon glyphicon-check', remote: true %>
-         <%= item.name %> 
+        <%= link_to "", [@user,item], method: :delete, class: 'glyphicon glyphicon-check check-sqr', remote: true %>
+         <%= item.name %>
+         <small> <em> <%= item.days_left %>  days left</em></small>
     </li>
   </ul>
 </div>
