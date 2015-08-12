@@ -1,11 +1,8 @@
 <div class="container">
-  <div class="row">
-    <tr>
-      <td> 
+  <ul>
+    <li>
         <%= link_to "", [@user,item], method: :delete, class: 'glyphicon glyphicon-check', remote: true %>
-      </td>
-      <td>
-        <h3 class="lead"> <%= item.name %> </h3>
-      </td>
-  </div>
+         <%= item.name %> 
+    </li>
+  </ul>
 </div>

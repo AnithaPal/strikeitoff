@@ -5,15 +5,25 @@
       <h1 > My Page </h1>
       <small > <%= current_user.name %> </small>
     </div>
-    <div class="row t-list">
-      <%# render partial: 'items/item', collections: @items if @items.present? %>
-      <%= render @items %>
-    </div>
     <br/>
-    <div class= "row todo-form">
-      <%= render partial: 'items/form', locals: {user: @user, item: @new_item } %>
+    <div class="row">
+      <div class="col-md-4">
+        <%# render partial: 'items/item', collections: @items if @items.present? %>
+        <%= render @items %>
+      </div>  
+      <div class= "col-md-6 col-md-offset-1">
+        <div class="panel panel-default box">
+          <div class="panel-heading"> 
+            <h3 class="panel-title">Add new item to your todo list</h3>
+          </div>
+          <div class="panel-body">
+            <%= render partial: 'items/form', locals: {user: @user, item: @new_item } %>
+          </div>  
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
 
 

@@ -28,7 +28,19 @@
   display: none;
 }
 
-ul
-{
+ul{
     list-style-type: none;
+}
+
+li {
+
+  padding: 5px;
+  font-size: 18px;
+
+}
+
+.box{
+
+  border-color: #ECECEC;
+
 }

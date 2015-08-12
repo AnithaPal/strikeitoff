@@ -15,3 +15,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).on('ready page:update', function(event) {
+  // apply non-idempotent transformations to the body
+});
