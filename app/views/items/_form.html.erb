@@ -11,8 +11,8 @@
     </div>
   <% end %>
   <%= form_group_tag(item.errors[:name]) do %>
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control', placeholder: "Enter your todo item" %>
+    <%= f.label :new_task %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter your task" %>
   <% end %>
   <div class ="form-group">
     <%= f.submit "Add Todo Item", class: 'btn btn-sm btn-primary' %>
