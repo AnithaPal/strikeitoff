@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="row col-md-5 col-md-offset-1">
-    <h3 class="lead"> <%= item.name %> </h3>
-  </div>
+  <ul>
+    <li>
+        <%= link_to "", [@user,item], method: :delete, class: 'glyphicon glyphicon-check', remote: true %>
+         <%= item.name %> 
+    </li>
+  </ul>
 </div>
