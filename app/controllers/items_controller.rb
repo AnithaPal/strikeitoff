@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html
+      format.html { redirect_to current_user }
       format.js 
     end
   end
@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html
+      format.html { redirect_to current_user }
       format.js
     end
 
