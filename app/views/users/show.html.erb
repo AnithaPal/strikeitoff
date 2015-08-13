@@ -8,9 +8,11 @@
     <br/>
     <div class="row">
       <div class="col-md-5">
+        <div class="js-items">
         <%# render partial: 'items/item', collections: @items if @items.present? %>
-        <%= render @items %>
-      </div>  
+          <%= render @items %>
+        </div>
+      </div>
       <div class= "col-md-6 col-md-offset-1">
         <div class="panel panel-default box">
           <div class="panel-heading"> 

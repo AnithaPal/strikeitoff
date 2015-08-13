@@ -1,6 +1,6 @@
 <div class="container">
   <ul>
-    <li>
+    <li id="item-<%=item.id %>">
         <%= link_to "", [@user,item], method: :delete, class: 'glyphicon glyphicon-check check-sqr', remote: true %>
          <%= item.name %>
          <small> <em> <%= item.days_left %>  days left</em></small>

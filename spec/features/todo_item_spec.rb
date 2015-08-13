@@ -8,17 +8,16 @@ describe "Todo items" do
       fill_in 'Password', with: @user.password
       click_button 'Sign in'
       visit(user_path(@user))
+      expect( page ).to have_content "My Page"
     end
   
   describe "Creating todo items" do
    
     it "allows user to create todo item" do
       expect(page).to have_content "My Page"
-      find("#item_name").fill_in "New task", with: "New task to do"
+      fill_in "name", with: "New task to do"
       # page.find_field("item_name").fill_in "New task", with: "New Task"
       # fill_in "New_task", with: "New Task"
     end
   end
 end
-
-  
