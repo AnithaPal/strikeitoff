@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
     @new_item = Item.new
 
     if @item.save
+      ItemMailer.new_item(@item).deliver_now
       flash[:notice] = "Item was created successfully"
     else
       flash[:error] = "Sorry, There was an error in creating your item. Please try again"
