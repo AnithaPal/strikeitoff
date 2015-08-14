@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "strikeitoff.item@gmail.com"
+  default from: "admin@strikeitoff"
   layout 'mailer'
 end
