@@ -7,4 +7,3 @@ namespace :mail do
     end
   end
 end
-
