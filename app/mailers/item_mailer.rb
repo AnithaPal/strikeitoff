@@ -12,4 +12,13 @@ class ItemMailer < ApplicationMailer
     mail to: "@user.email",
          subject: "New Todo Item is created"
   end
+
+
+  def remind_todo_item(user, items_array)
+    @user = user
+    @items = items_array
+
+    mail to: "@user.email",
+         subject: "Reminder to do finish your to do items"
+  end
 end
