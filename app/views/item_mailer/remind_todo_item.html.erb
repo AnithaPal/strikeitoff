@@ -1,0 +1,9 @@
+<div>
+  <p> you have only one day left to finish it. Hurry up!!! Finish it. </p>
+  <p> Items waiting for you to finish </p>
+  <ul>
+    <% @items.each do |item| %>
+      <li> <em> <%= item.name %>  at <%= item.created_at %> </em> </li>
+      <% end %>
+  </ul>
+</div>
